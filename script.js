@@ -6,6 +6,7 @@ let form = document.querySelector("form"); //moved here to fix scope issue
 
 // SUBMIT EVENT FOR THE FORM
 document.addEventListener("DOMContentLoaded", function () {
+
   //console.log("Form found:", form);
 
   // add event listener to the form
@@ -45,20 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //  Fetch and display all saved countries
-getCountries();
- // Show each saved card
-      });
- 
-//console.log("Form submitted with name:", fullName);
+  getCountries();
+  // Show each saved card
+});
 
-// If user clicked Cancel
-//console.log("Form submission cancelled by user.");
-
-// Get the full name value using its ID
-//let fullName = document.querySelector('#full-name').value;
-//console.log("Full Name:", fullName);
-
-// Get
 // Creates and appends a travel card to the page
 function displayCountry(data) {
   let startDate = new Date(data.startDate);
@@ -69,33 +60,30 @@ function displayCountry(data) {
   card.classList.add("card");
 
   card.innerHTML = `
-  <h2>Travel Card</h2>
-  <p class="card-name">Name: ${data.fullName}</p>
-  <p class="card-phone">Phone: ${data.phoneNumber}</p>
-  <p>Duration: ${totalDays} days</p>
-  <p class="card-status">Status: ${data.travelStatus}</p>
-  <p class="card-country">Country: ${data.countryName}</p>
-  <p class="card-email">Email: ${data.emailAddress}</p>
-  <div class="card-buttons">
-    <button class="edit-btn">Edit</button>
-    <button class="delete-btn">Delete</button>
-  </div>
-`;
-
+    <h2>Travel Card</h2>
+    <p class="card-name">Name: ${data.fullName}</p>
+    <p class="card-phone">Phone: ${data.phoneNumber}</p>
+    <p>Duration: ${totalDays} days</p>
+    <p class="card-status">Status: ${data.travelStatus}</p>
+    <p class="card-country">Country: ${data.countryName}</p>
+    <p class="card-email">Email: ${data.emailAddress}</p>
+    <div class="card-buttons">
+      <button class="edit-btn">Edit</button>
+      <button class="delete-btn">Delete</button>
+    </div>
+  `;
 
   let container = document.querySelector("#country-cards");
   container.appendChild(card);
 
   // DELETE BUTTON
   let deleteButton = card.querySelector(".delete-btn");
-
-deleteButton.addEventListener("click", function () {
-  deleteCountry(data.id, card);
-});
+  deleteButton.addEventListener("click", function () {
+    deleteCountry(data.id, card);
+  });
 
   // EDIT BUTTON
   let editButton = card.querySelector(".edit-btn");
-
   editButton.addEventListener("click", function () {
     let name = card.querySelector(".card-name")?.textContent.replace("Name: ", "") || "";
     let phone = card.querySelector(".card-phone")?.textContent.replace("Phone: ", "") || "";
@@ -109,7 +97,7 @@ deleteButton.addEventListener("click", function () {
     document.querySelector("#country-name").value = country;
     document.querySelector("#email").value = email;
 
-    //  Save the ID of the country being edited
+    // Save the ID of the country being edited
     editCountryId = data.id;
 
     form.scrollIntoView({ behavior: "smooth" });
@@ -133,7 +121,7 @@ filterButtons.forEach(function (button) {
     allCards.forEach(function (card) {
       //This grabs the text of the Status line inside that card.
       let statusText = card.querySelector("p:nth-of-type(4)").textContent.replace("Status: ", "");
-      //then If the button clicked is "all" or the card’s status matches what we clicke
+      //then If the button clicked is "all" or the card’s status matches what we clicked
       if (selectedFilter === "all" || statusText === selectedFilter) {
         //then show the card
         card.style.display = "block";
@@ -144,7 +132,7 @@ filterButtons.forEach(function (button) {
   });
 });
 
-//  GET all countries from json-server
+// GET all countries from json-server
 function getCountries() {
   fetch("http://localhost:3000/countries", {
     method: "GET",
@@ -164,9 +152,7 @@ function getCountries() {
     });
 }
 
-
-
-//  Sends data to json-server and displays it on the page
+// Sends data to json-server and displays it on the page
 function createCountry(data) {
   fetch("http://localhost:3000/countries", {
     method: "POST",
@@ -181,7 +167,7 @@ function createCountry(data) {
     });
 }
 
-//  DELETE from json-server and remove from page
+// DELETE from json-server and remove from page
 function deleteCountry(id, cardElement) {
   fetch(`http://localhost:3000/countries/${id}`, {
     method: "DELETE",
@@ -195,7 +181,7 @@ function deleteCountry(id, cardElement) {
     });
 }
 
-
+// PUT (update) data on json-server
 function updateCountry(id, data) {
   fetch(`http://localhost:3000/countries/${id}`, {
     method: "PUT",
