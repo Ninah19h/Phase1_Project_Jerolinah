@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dream. Explore. Track</title>
+  <link rel="icon" type="image/jpeg" href="travel.jpg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="brand">
+        <h1>✈️ D.E.T &nbsp;&nbsp; Travel Itinerary</h1>
+      </div>
+      
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Itinerary Form</h2>
+      <form id="country-form">
+        <div class="grid-form">
+          <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="e.g. Jerolinah Anyango" pattern="[A-Za-z\s]+" title="Only letters allowed" />
+          </div>
+
+          <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" placeholder="e.g. 0712345678" pattern="[0-9]{10,15}" title="Only numbers allowed (10-15 digits)" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="e.g. jerolinah@example.com" />
+          </div>
+
+          <div class="form-group">
+            <label for="start-date">Start Date</label>
+            <input type="date" id="start-date" />
+          </div>
+
+          <div class="form-group">
+            <label for="end-date">End Date</label>
+            <input type="date" id="end-date" />
+          </div>
+
+          <div class="form-group">
+            <label for="country-name">Country Name</label>
+            <input type="text" id="country-name" placeholder="e.g. France" />
+          </div>
+
+          <div class="form-group">
+            <label for="travel-status">Travel Status</label>
+            <select id="travel-status">
+              <option value="Dreaming">Dreaming</option>
+              <option value="Visited">Visited</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="submit-row">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="filter-section">
+      <button class="filter-btn" data-filter="all">Show All Countries</button>
+      <button class="filter-btn" data-filter="Visited">Show Visited</button>
+      <button class="filter-btn" data-filter="Dreaming">Show Dreaming</button>
+    </section>
+
+    <!-- Country Cards Container -->
+    <section class="cards-container" id="country-cards">
+      <!-- Cards will be added here dynamically via JavaScript -->
+    </section>
+  </main>
+<footer class="footer">
+  <p>&copy; 2025 Travel Bucket List Tracker. All rights reserved.</p>
+  <p>Created by Jerolinah Angwire Anyango</p>
+  <p>Contact: <a href="tel:0115784339">0115784339</a></p>
+
+  <div class="payment-methods">
+    <span>Payment Methods:</span>
+    <img src="payment-visa.png" alt="Visa" />
+    <img src="payment-mastercard.png" alt="Mastercard" />
+    <img src="payment-paypal.png" alt="PayPal" />
+  </div>
+
+  <p><a href="#top" class="back-to-top">Back to top</a></p>
+</footer>
+
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

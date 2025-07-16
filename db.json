@@ -1,0 +1,74 @@
+{
+  "countries": [
+    {
+      "fullName": "Jerolinah Angwire",
+      "phoneNumber": "0987654321",
+      "startDate": "",
+      "endDate": "",
+      "emailAddress": "ja@gmail.com",
+      "countryName": "South Africa",
+      "travelStatus": "Dreaming",
+      "id": "567c"
+    },
+    {
+      "id": "6989",
+      "fullName": "Halima Mulugu",
+      "phoneNumber": "0712345678",
+      "startDate": "2025-07-17",
+      "endDate": "2025-08-20",
+      "emailAddress": "halm@gmail.com",
+      "countryName": "Dubai",
+      "travelStatus": "Visited"
+    },
+    {
+      "id": "7962",
+      "fullName": "David Jeff",
+      "phoneNumber": "0723467812",
+      "startDate": "2025-07-24",
+      "endDate": "2025-09-03",
+      "emailAddress": "djeff@gmail.com",
+      "countryName": "Japan",
+      "travelStatus": "Visited"
+    },
+    {
+      "id": "27c7",
+      "fullName": "Ninah A",
+      "phoneNumber": "0723908645",
+      "startDate": "2025-08-07",
+      "endDate": "2025-10-07",
+      "emailAddress": "ninah@gmail.com",
+      "countryName": "Netherland",
+      "travelStatus": "Dreaming"
+    },
+    {
+      "id": "2088",
+      "fullName": "Shisha Lup",
+      "phoneNumber": "0723497612",
+      "startDate": "2025-08-08",
+      "endDate": "2025-10-29",
+      "emailAddress": "shishlp@gmail.com",
+      "countryName": "German",
+      "travelStatus": "Dreaming"
+    },
+    {
+      "id": "f30c",
+      "fullName": "Huda P",
+      "phoneNumber": "0789654321",
+      "startDate": "2025-07-25",
+      "endDate": "2025-08-17",
+      "emailAddress": "hudp@gmail.com",
+      "countryName": "Swizeland",
+      "travelStatus": "Visited"
+    },
+    {
+      "id": "e6ed",
+      "fullName": "Amaya Papaya",
+      "phoneNumber": "0789543217",
+      "startDate": "2025-07-30",
+      "endDate": "2025-10-07",
+      "emailAddress": "amayapap@gmail.com",
+      "countryName": "Fiji",
+      "travelStatus": "Visited"
+    }
+  ]
+}

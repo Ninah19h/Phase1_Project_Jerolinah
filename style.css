@@ -1,0 +1,343 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fffefc;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #d84315;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(255, 122, 89, 0.2);
+  transition: background 0.3s ease;
+}
+
+.navbar-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e64a19;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.brand h1:hover {
+  color: #ff8a65;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Search Bar */
+.search-bar input {
+  padding: 0.65rem 1rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 0.95rem;
+  width: 230px;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(255, 183, 77, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #777;
+}
+
+.search-bar input:focus {
+  box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.3);
+}
+
+/* Container */
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Form Section */
+.form-section {
+  background: #fff3e0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(255, 138, 101, 0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #f06292;
+}
+
+/* Grid Layout */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem 2rem;
+}
+
+/* Form Fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #e64a19;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #ff8a65;
+  outline: none;
+}
+
+/* Submit Button Row */
+.submit-row {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.submit-row button {
+  padding: 0.75rem 2rem;
+  background: #ff8a65;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-row button:hover {
+  background: #ff7043;
+}
+/* Filter Section */
+.filter-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Filter Buttons */
+.filter-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: #ffe0e0;
+  color: #e64a19;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(255, 138, 101, 0.2);
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #f8bbd0;
+  color: #bf360c;
+  transform: scale(1.05);
+}
+/* Cards Container */
+.cards-container {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 3rem;
+}
+
+/* Individual Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(255, 152, 0, 0.15);
+}
+
+.card h3 {
+  color: #ff7043;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Info Lines */
+.card .info-line {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Status Badge */
+.status {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.status.Visited {
+  background: #c8e6c9;
+  color: #2e7d32;
+}
+
+.status.Dreaming {
+  background: #fff59d;
+  color: #f57f17;
+}
+
+/* Buttons inside card */
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.card-buttons button {
+  flex: 1;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem; /* 👈 slightly bigger text */
+  font-weight: 600; /* 👈 optional: makes it bolder */
+  transition: background 0.3s ease;
+}
+
+
+.edit-btn {
+  background: #4dd0e1;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #26c6da;
+}
+
+.delete-btn {
+  background: #ef9a9a;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #e57373;
+}
+
+
+.footer {
+  background-color: #fffefc; /* matches body */
+  color: #333;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.95rem;
+  border-top: 2px solid #ffccbc; /* soft orange-pink separator */
+  box-shadow: 0 -4px 12px rgba(255, 183, 77, 0.1); /* soft top shadow */
+  border-radius: 12px 12px 0 0;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.footer a {
+  color: #e64a19; /* your brand orange */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ff7043;
+  text-decoration: underline;
+}
+
+.payment-methods {
+  margin: 1.2rem 0;
+}
+
+.payment-methods span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #e64a19;
+  font-size: 0.95rem;
+}
+
+.payment-methods img {
+  width: 45px;
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.payment-methods img:hover {
+  transform: scale(1.1);
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.footer-glass {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 122, 89, 0.2); /* matches navbar */
+  box-shadow: 0 -4px 12px rgba(255, 183, 77, 0.1); 
+  border-radius: 12px 12px 0 0;
+}
